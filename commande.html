@@ -460,9 +460,9 @@
     }
     const total = cart.reduce((s,i) => s + i.price * i.qty, 0);
     document.getElementById('recapAmount').innerHTML =
-      `<div class="recap-row"><span>Sous-total</span><strong>${total.toFixed(2)}€</strong></div>
+      `<div class="recap-row"><span>Sous-total</span><strong>${total.toFixed(2)}Frcfa</strong></div>
        <div class="recap-row"><span>Livraison</span><strong>À définir</strong></div>
-       <div class="recap-row recap-total"><span>Total à prépayer</span><strong>${total.toFixed(2)}€</strong></div>`;
+       <div class="recap-row recap-total"><span>Total à prépayer</span><strong>${total.toFixed(2)}Frcfa</strong></div>`;
     setStep(2);
   }
   function backToStep1() { setStep(1); }
