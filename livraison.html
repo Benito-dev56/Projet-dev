@@ -657,7 +657,15 @@
     t.textContent = msg; t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 2800);
   }
-
+  if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() {
+    selectMode('moto');
+    buildZonesGrid();
+  });
+} else {
+  selectMode('moto');
+  buildZonesGrid();
+}
   window.addEventListener('scroll', () =>
     document.getElementById('navbar').classList.toggle('scrolled', scrollY > 30));
   function toggleMenu() {
